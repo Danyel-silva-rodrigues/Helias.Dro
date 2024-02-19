@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    
+}
+/* nav-bar */
+nav{
+    display: flex;
+    justify-content: space-around;
+    height: 10vh;
+    align-items: center;
+    background-color: #4070F4;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+
+
+}
+
+nav > ul{
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+.list-icon{
+
+list-style: none;
+}
+.links-socias{
+  padding-right: 20px;
+}
+.listlink{
+   padding: 15px;
+   transition: .5s;
+    list-style: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.listlink:hover{
+    background-color:white;
+}
+a{
+color: black;
+text-decoration: none;
+}
+.img-logo{
+    width: 130px;
+    height: 90px;
+}
+
+i{
+    font-size: 25px;
+}
+.nav-list {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+  }
+  
+  .mobile-menu {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+  }
+  
+  /* --------------------------------------------------------------- */
+ 
+
+
+
+
+  @media (max-width: 1278px) {
+    body {
+      overflow-x: hidden;
+    }
+    .nav-list {
+      position: absolute;
+      top: 8vh;
+      right: 0;
+      width: 50vw;
+      height: 92vh;
+      background: #4070F4;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in;
+    }
+    .nav-list li {
+      margin-left: 0;
+      opacity: 0;
+    }
+    .mobile-menu {
+      display: block;
+    }
+    .conteudo_de_boas{
+        display: block;
+      }
+  }
+
+
+       
+  
+  
+  .nav-list.active {
+    transform: translateX(0);
+  }
+  
+  
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    
+  }
+  
+  .mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+  }
+  
+  .mobile-menu.active .line2 {
+    opacity: 0;
+  }
+  
+  .mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+  }
+  
+ 
